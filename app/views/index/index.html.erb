@@ -1,0 +1,20 @@
+
+		<h1>Sarah Haefele</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Project Name</th>
+					<th>Description</th>
+					<th>URL</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% PROJECTS.each do |project, details| %>
+					<tr>
+						<td><%= project %></td>
+						<td><%= details['description'] %></td>
+						<td><%= link_to details['url'] %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
