@@ -62,4 +62,6 @@ module Assignment0
 end
 
 #loads the yaml file projects.yml and stores the content in global variable
-PROJECTS = YAML::load_file(File.join(File.dirname(File.expand_path(__FILE__)),'/projects.yml'))
+#PROJECTS = YAML::load_file(File.join(File.dirname(File.expand_path(__FILE__)),'/projects.yml'))
+PROJECTS = YAML.load(File.read(File.expand_path('config/projects.yml')))
+PROJECTS.symbolize_keys!
