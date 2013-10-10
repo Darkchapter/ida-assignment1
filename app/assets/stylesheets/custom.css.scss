@@ -1,0 +1,35 @@
+/* Adding the whole Bootstrap framework */
+@import "bootstrap";
+
+/* Variables: */
+$lightGray: #999;
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	padding-top: 10px;
+	padding-left: 15px;
+}
+
+section {
+	overflow: auto;
+}
+
+textarea {
+	resize: vertical;
+}
+
+h1 {
+	color: $lightGray;
+}
+
+/*.center {
+	text-align: center;
+} */
+
+/*.center h1 {
+	margin-bottom: 10px;
+} */
+
