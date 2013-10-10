@@ -4,14 +4,14 @@
 				<p>
 					<b>Using 'bootstrap-sass' gem to insert bootstrap framework:</b> <br />
 					<i>with the help of ruby.railstutorial.org</i> <br />
-					&nbsp;&nbsp;&nbsp;&nbsp;Modifying Gemfile <br />
+					&nbsp;&nbsp;&nbsp;&nbsp;Modifying "Gemfile" <br />
 					&nbsp;&nbsp;&nbsp;&nbsp;Installing bundle <br />
-					&nbsp;&nbsp;&nbsp;&nbsp;Modifying application.rb for asset pipeline compatibility
+					&nbsp;&nbsp;&nbsp;&nbsp;Modifying "application.rb" for asset pipeline compatibility
 				</p>
 				<p>
 					<b>Creating own stylesheet:</b><br />
 					<i>with the help of ruby.railstutorial.org</i> <br />
-					&nbsp;&nbsp;&nbsp;&nbsp;Creating a custom.css.scss file<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;Creating a "custom.css.scss" file<br />
 					&nbsp;&nbsp;&nbsp;&nbsp;Importing bootstrap in it<br />
 					&nbsp;&nbsp;&nbsp;&nbsp;Adding some css
 				</p>
@@ -23,8 +23,16 @@
 				<p>
 					<b>Adding jQuery:</b><br />
 					<i>with the help of github.com/rails/jquery-ujs</i> <br />
-					&nbsp;&nbsp;&nbsp;&nbsp;Modifying Gemfile by adding gem jquery-rails<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;Modifying "Gemfile" by adding gem jquery-rails<br />
 					&nbsp;&nbsp;&nbsp;&nbsp;Install bundle<br />
-					&nbsp;&nbsp;&nbsp;&nbsp;Modify application.js file
+					&nbsp;&nbsp;&nbsp;&nbsp;Modify "application.js" file
+				</p>
+				<p>
+					<b>Create new route to project 2 page:</b><br />
+					&nbsp;&nbsp;&nbsp;&nbsp;Modifying "routes.rb" file with following:<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;get '/pages/project_2', to: 'index#project_2', as: 'project_2'<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;"/pages/project_2" is the URL pattern on which it will be matched<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;":to index:project2" will be redirected to the action "project_2" in the index-controller<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;"as: 'project_2'" creates a alias name for this route (e.g. can be used to create URL in controllers and actions)
 				</p>
 				
