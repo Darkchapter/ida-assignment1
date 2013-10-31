@@ -1,0 +1,25 @@
+<h1>Sarah Haefele</h1>
+		<div class="table-responsive">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Sun</th>
+						<th>Mon</th>
+						<th>Tue</th>
+						<th>Wed</th>
+						<th>Thu</th>
+						<th>Fri</th>
+						<th>Sat</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% PROJECTS.each do |project, details| %>
+						<tr>
+							<td><%= project %></td>
+							<td><%= details['description'] %></td>
+							<td><%= link_to details['url'], details['url'] %></td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
