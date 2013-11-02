@@ -1,25 +1,87 @@
-<h1>Sarah Haefele</h1>
-		<div class="table-responsive">
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<th>Sun</th>
-						<th>Mon</th>
-						<th>Tue</th>
-						<th>Wed</th>
-						<th>Thu</th>
-						<th>Fri</th>
-						<th>Sat</th>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/jquery-ui-1.10.3.custom.min.css" />
+		
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/styles.css" />
+					
+		
+		<script type="text/javascript" src="/assets/javascripts/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="/assets/javascripts/jquery-ui-1.10.3.custom.min.js"></script>
+		<script type="text/javascript" src="/assets/javascripts/calendar.js"></script>
+	</head>
+	<body> 
+
+		<!-- Page Wrapper BEGIN -->
+		<div id="page_wrapper">
+	
+			<div id="imprint_header">
+				<p>Sarah Haefele</p>
+			</div>
+		
+			<!-- prints out the table for the calendar -->
+			<table class="table table-bordered table-condensed calendar">
+				<thead>			
+
+					<!-- button for selecting/loading the current day -->
+					<button class="btn" id="todayselector" title="Goto Today">Today</button>
+				
+					<!-- provides navigation for years and months and displays selected month name -->
+					<tr class="datenavigation">
+						<th><a href="#" id="previous_year" title="previous year">&laquo;</a></th>
+						<th><a href="#" id="previous_month" title="previous month">&lt;</a></th>
+						<th colspan="3" id="today"></th>
+						<th><a href="#" id="next_month" title="next month">&gt;</a></th>
+						<th><a href="#" id="next_year" title="next year">&raquo;</a></th>
 					</tr>
+					
+					<!-- prints header of table with day names (week starts on monday!) -->
+					<tr class="datenavigation">	
+						<th class="dayheader">Sun</th>
+						<th class="dayheader">Mon</th>
+						<th class="dayheader">Tue</th>
+						<th class="dayheader">Wed</th>
+						<th class="dayheader">Thu</th>
+						<th class="dayheader">Fri</th>
+						<th class="dayheader">Sat</th>						
+					</tr>           
 				</thead>
-				<tbody>
-					<% PROJECTS.each do |project, details| %>
-						<tr>
-							<td><%= project %></td>
-							<td><%= details['description'] %></td>
-							<td><%= link_to details['url'], details['url'] %></td>
-						</tr>
-					<% end %>
+				<tbody id="calendar">
+
 				</tbody>
 			</table>
+			
+			
+			
+			
+			<div id="event_edit_container">
+				<form>
+					<input type="hidden" />
+					<ul>
+						<li>
+							<span>Date: </span><span class="date_holder"></span> 
+						</li>
+						<li>
+							<label for="start">Start Time: </label><select name="start"><option value="">Select Start Time</option></select>
+						</li>
+						<li>
+							<label for="end">End Time: </label><select name="end"><option value="">Select End Time</option></select>
+						</li>
+						<li>
+							<label for="title">Title: </label><input type="text" name="title" />
+						</li>
+						<li>
+							<label for="body">Body: </label><textarea name="body"></textarea>
+						</li>
+					</ul>
+				</form>
+			</div>
+			
 		</div>
+		<!-- Page Wrapper END -->
+		
+	</body>
+</html>
