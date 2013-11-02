@@ -1,8 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	
+
 		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/jquery-ui-1.10.3.custom.min.css" />
 		
 		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/bootstrap.css" />
@@ -12,14 +8,13 @@
 		<script type="text/javascript" src="/assets/javascripts/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="/assets/javascripts/jquery-ui-1.10.3.custom.min.js"></script>
 		<script type="text/javascript" src="/assets/javascripts/calendar.js"></script>
-	</head>
-	<body> 
-
+		
 		<!-- Page Wrapper BEGIN -->
 		<div id="page_wrapper">
 	
+			<!-- imprint header -->
 			<div id="imprint_header">
-				<p>Sarah Haefele</p>
+				<p>Sarah Häfele</p>
 			</div>
 		
 			<!-- prints out the table for the calendar -->
@@ -47,17 +42,17 @@
 						<th class="dayheader">Thu</th>
 						<th class="dayheader">Fri</th>
 						<th class="dayheader">Sat</th>						
-					</tr>           
+					</tr>
 				</thead>
+				
+				<!-- placeholder for the generated calendar -->
 				<tbody id="calendar">
-
 				</tbody>
-			</table>
+				
+			</table>			
 			
-			
-			
-			
-			<div id="event_edit_container">
+			<!-- form for adding a new event; gets displayed as modal dialog window -->
+			<div id="eventform">
 				<form>
 					<input type="hidden" />
 					<ul>
@@ -65,16 +60,16 @@
 							<span>Date: </span><span class="date_holder"></span> 
 						</li>
 						<li>
-							<label for="start">Start Time: </label><select name="start"><option value="">Select Start Time</option></select>
+							<label for="start">Start Time: </label><select name="start"></select>
 						</li>
 						<li>
-							<label for="end">End Time: </label><select name="end"><option value="">Select End Time</option></select>
+							<label for="end">End Time: </label><select name="end"></select>
 						</li>
 						<li>
 							<label for="title">Title: </label><input type="text" name="title" />
 						</li>
 						<li>
-							<label for="body">Body: </label><textarea name="body"></textarea>
+							<label for="description">Description: </label><textarea name="description"></textarea>
 						</li>
 					</ul>
 				</form>
@@ -82,6 +77,3 @@
 			
 		</div>
 		<!-- Page Wrapper END -->
-		
-	</body>
-</html>
